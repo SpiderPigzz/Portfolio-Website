@@ -3,6 +3,7 @@ import { Grid, Typography, TextField, Button, Link } from "@mui/material";
 import { API } from "../../utils/Constants";
 import "../../utils/Gradient.css";
 import { SnackbarProvider, VariantType, useSnackbar } from "notistack";
+import { ContactBackground } from "utils/FileMapping";
 
 export default function Question() {
   const { enqueueSnackbar } = useSnackbar();
@@ -54,15 +55,18 @@ export default function Question() {
       <Grid
         container
         sx={{
-          width: "100vw",
+          width: "100%",
+          height: "100vh",
           overflow: "hidden",
           mt: "3%",
           p: "2%",
           justifyContent: "center",
           display: "flex",
           minHeight: "45vh",
-          background:
-            "linear-gradient(248deg, #ba3bff 0%, #ef6d21 35%, #430043 100%)",
+          backgroundImage: `url(${ContactBackground})`,
+          backgroundSize: "cover",
+          // background:
+          //   "linear-gradient(248deg, #ba3bff 0%, #ef6d21 35%, #430043 100%)",
           textAlign: "center",
           alignItems: "center",
           alignContent: "center",

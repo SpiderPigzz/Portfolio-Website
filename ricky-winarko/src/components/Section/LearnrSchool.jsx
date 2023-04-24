@@ -18,7 +18,7 @@ export default function Content() {
       sx={{
         justifyContent: "center",
         display: "flex",
-        backgroundImage: `url(${HardwareBackground})`,
+        backgroundImage: `linear-gradient(to top, rgba(22, 29, 45, 1) 10%, rgba(22, 29, 45, 0) 25%, rgba(22, 29, 45, 0) 75% ,rgba(22, 29, 45, 1) 90%),url(${HardwareBackground})`,
         backgroundSize: "cover",
         paddingTop: "2rem",
         paddingBottom: "2rem",
@@ -55,7 +55,7 @@ export default function Content() {
             Introducing:
           </Typography>
           <Typography variant="h1" fontWeight={700}>
-            <span className="pink"> Learnr School </span>
+            <span className="pink"> Ricky Winarko </span>
           </Typography>
           <Typography variant="h4" fontWeight={400} sx={{ my: "2%" }}>
             Introducing a{" "}

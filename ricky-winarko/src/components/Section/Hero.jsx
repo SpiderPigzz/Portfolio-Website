@@ -3,6 +3,9 @@ import { Grid, Link, Typography } from "@mui/material";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import "../../utils/Gradient.css";
 import { HeroBackground } from "utils/FileMapping";
+import SkeuButton from "components/Reusables/SkeuButton";
+import { Noise } from "utils/FileMapping";
+import SkeuCard from "components/Reusables/SkeuCard";
 
 export default function HeroBanner() {
   return (
@@ -13,8 +16,9 @@ export default function HeroBanner() {
         width: "100%",
         overflow: "hidden",
         alignItems: "center",
-        backgroundImage: `linear-gradient(to top, #161D2D, rgba(0,0,0,0.1)),url(${HeroBackground})`,
+        backgroundImage: `linear-gradient(to top, #161D2D, rgba(0,0,0,0.1)), url(${HeroBackground})`,
         backgroundSize: "cover",
+        backgroundRepeat: "repeat",
       }}
     >
       <Grid
@@ -40,6 +44,8 @@ export default function HeroBanner() {
           <span className="red">Learn more about me!</span> <br />
         </Typography>
         <KeyboardDoubleArrowDownIcon sx={{ fontSize: 64, mt: "2%" }} />
+        <SkeuButton> This is a test</SkeuButton>
+
         {/* <Button
           variant="contained"
           size="large"

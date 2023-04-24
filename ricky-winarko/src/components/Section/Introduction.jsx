@@ -19,6 +19,7 @@ export default function Introduction() {
       container
       sx={{
         width: "100%",
+        height: "100vh",
         overflow: "hidden",
         m: 0,
         p: 4,
@@ -45,17 +46,15 @@ export default function Introduction() {
         }}
       >
         <Typography variant="h3" color={"primary"} fontWeight={600}>
-          <span className="">with Learnr</span>
+          <span className="">Introduction to myself</span>
         </Typography>
         <Typography variant="h2" fontWeight={500}>
-          <span className="">Our Mission and Vision.</span>
+          <span className="">My values.</span>
         </Typography>
         <Typography variant="h6" fontWeight={500} sx={{ m: "1%" }}>
-          We aim to provide a comprehensive hardware and software package
-          infused into an education programme. <br />
-          <br /> Providing a learning experience that guides the student’s
-          thinking, powered by AI and offering open-ended exploration through
-          follow-up courses within many of our personalised learning pathways.
+          I am a software developer by day and an artist by night <br />
+          <br /> I enjoy the process of learning and discovery and am unafraid
+          of trying new things!
         </Typography>
         <Badges info={info} />
       </Grid>

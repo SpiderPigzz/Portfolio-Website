@@ -10,13 +10,7 @@ import { HEADER_HEIGHT } from "utils/Constants";
 import { LearnrAppIcon } from "utils/FileMapping";
 
 const AppHeader = () => {
-  const { user } = useAuthContext();
   const navigate = useNavigate();
-
-  const handleLogout = () => {
-    removeToken();
-    navigate(getRoute("signin"), { replace: true });
-  };
 
   function LearnrIcon(props) {
     return (
@@ -42,7 +36,6 @@ const AppHeader = () => {
         <Toolbar>
           <Button
             onClick={() => {
-              console.log("this should work");
               navigate(getRoute("landing"));
             }}
           >
@@ -52,35 +45,9 @@ const AppHeader = () => {
             variant="h5"
             sx={{ flexGrow: 1, fontWeight: 800, letterSpacing: 6, ml: "1%" }}
           >
-            Learnr .
+            RICKY
           </Typography>
-          {user ? (
-            <Box>
-              <Button href="/profile">{user.username}</Button>
-              <Button variant="contained" onClick={handleLogout}>
-                Logout
-              </Button>
-            </Box>
-          ) : (
-            <Box sx={{ spacing: 10 }}>
-              <Button
-                sx={{ color: "white" }}
-                onClick={() => {
-                  navigate(getRoute("signin"));
-                }}
-              >
-                Login
-              </Button>
-              <Button
-                sx={{ color: "white" }}
-                onClick={() => {
-                  navigate(getRoute("signup"));
-                }}
-              >
-                SignUp
-              </Button>
-            </Box>
-          )}
+          <Box></Box>
         </Toolbar>
       </NavBar>
     </Box>

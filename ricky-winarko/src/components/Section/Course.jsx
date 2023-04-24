@@ -1,6 +1,7 @@
 import * as React from "react";
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import "../../utils/Gradient.css";
+import { CodingBackground } from "utils/FileMapping";
 
 const CourseContent = [
   { name: "7+", color: "#b80050", text: "Combined Years of Experience" },
@@ -10,11 +11,17 @@ const CourseContent = [
 
 export default function Course() {
   return (
-    <div
-      style={{
-        justifyContent: "center",
-        display: "flex",
-        marginBottom: "6%",
+    <Box
+      sx={{
+        width: "100%",
+        overflow: "hidden",
+        m: 0,
+        p: 4,
+        paddingTop: "2rem",
+        alignItems: "center",
+        backgroundImage: `linear-gradient(to top, rgba(22, 29, 45, 1) 10%, rgba(22, 29, 45, 0) 25%, rgba(22, 29, 45, 0) 75% ,rgba(22, 29, 45, 1) 90%),url(${CodingBackground})`,
+        backgroundColor: `#161D2D`,
+        backgroundSize: "cover",
       }}
     >
       <Grid
@@ -82,6 +89,6 @@ export default function Course() {
           ))}
         </Grid>
       </Grid>
-    </div>
+    </Box>
   );
 }
